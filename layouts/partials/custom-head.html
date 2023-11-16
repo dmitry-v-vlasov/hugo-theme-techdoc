@@ -2,7 +2,7 @@
 {{ "<!-- BEGIN --- PAGE SPECIFIC SCRIPTS --- BEGIN -->" | safeHTML }}
 {{ with .Params.scripts }}
     {{ range . }}
-        <script type="text/javascript" src="{{ . | absURL }}"></script>
+        <script type="text/javascript" src="{{ . | relURL }}"></script>
     {{ end }}
 {{ end }}
 {{ "<!-- END ----- PAGE SPECIFIC SCRIPTS ----- END -->" | safeHTML }}
