@@ -23,7 +23,7 @@
 
 {{define "menu-item"}}
 {{- with .item -}}
-<a href="{{ .URL }}">
+<a href="{{ .URL | relURL }}">
   {{- with .Pre -}}{{- . -}}{{- end -}}
   {{- .Name -}}
   {{- with .Post -}}{{- . -}}{{- end -}}
